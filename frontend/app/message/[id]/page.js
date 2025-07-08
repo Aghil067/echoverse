@@ -20,13 +20,13 @@ export default function PostDetailPage() {
 
   const handleReply = async () => {
     if (!reply.trim()) return;
-    await fetch(`http://localhost:5000/api/posts/${id}/reply`, {
+    await fetch(`https://echoverse-3j45.onrender.com/api/posts/${id}/reply`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username: session?.user.name, text: reply }),
     });
     setReply('');
-    const res = await fetch(`http://localhost:5000/api/posts/${id}`);
+    const res = await fetch(`https://echoverse-3j45.onrender.com/api/posts/${id}`);
     const data = await res.json();
     setPost(data);
   };
