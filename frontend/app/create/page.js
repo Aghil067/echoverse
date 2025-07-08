@@ -38,26 +38,33 @@ const CreatePostPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white px-4 py-12 flex justify-center items-center">
-      <div className="w-full max-w-2xl bg-white/60 backdrop-blur-xl border border-sky-200 shadow-xl text-gray-800 rounded-2xl p-8">
-        <h2 className="text-3xl font-bold text-center mb-6 text-sky-800">📝 Create a New Post</h2>
-        <div className="flex flex-col gap-5">
+    <div className="min-h-screen bg-gray-50 px-4 py-12 flex justify-center items-center">
+      <div className="w-full max-w-xl bg-white shadow-xl rounded-2xl p-6 sm:p-10 border border-blue-200">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-blue-700">📝 Create a New Post</h2>
+
+        <div className="flex flex-col gap-4">
           <input
             type="text"
             id="title"
             value={form.title}
             onChange={handleChange}
             placeholder="Enter title"
-            className="border p-2 rounded"
+            className="border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <textarea
             id="content"
             value={form.content}
             onChange={handleChange}
             placeholder="Enter content"
-            className="border p-2 rounded"
+            rows={5}
+            className="border border-gray-300 p-3 rounded resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-          <button onClick={handleSubmit} className="bg-blue-500 text-white px-4 py-2 rounded">Save</button>
+          <button
+            onClick={handleSubmit}
+            className="bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition"
+          >
+            Save Post
+          </button>
         </div>
       </div>
     </div>
