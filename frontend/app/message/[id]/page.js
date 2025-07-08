@@ -11,7 +11,7 @@ export default function PostDetailPage() {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await fetch(`http://localhost:5000/api/posts/${id}`);
+      const res = await fetch(`https://echoverse-3j45.onrender.com/api/posts/${id}`);
       const data = await res.json();
       setPost(data);
     };

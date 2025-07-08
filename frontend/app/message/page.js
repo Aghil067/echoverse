@@ -18,7 +18,7 @@ export default function FeedPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/posts');
+        const res = await fetch('https://echoverse-3j45.onrender.com/api/posts');
         const data = await res.json();
         setPosts(data);
       } catch (error) {

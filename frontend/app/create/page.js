@@ -16,7 +16,7 @@ const CreatePostPage = () => {
     if (!session) return;
 
     try {
-      const res = await fetch('http://localhost:5000/api/posts', {
+      const res = await fetch('https://echoverse-3j45.onrender.com/api/posts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
